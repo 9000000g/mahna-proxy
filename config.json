@@ -1,0 +1,23 @@
+{
+    "server": {
+        "address": "http://127.0.0.1",
+        "port": 9834
+    },
+    "outputType": "json",
+    "dataServers": [{
+        "id": "arak_calls",
+        "method": "GET",
+        "url": "http://127.0.0.1:9100/data.xml",
+        "dataType": "xml"
+    }, {
+        "id": "tehran_calls",
+        "method": "GET",
+        "url": "http://127.0.0.1:9100/data.json",
+        "dataType": "json"
+    }, {
+        "id": "ardebil_calls",
+        "method": "POST",
+        "url": "http://127.0.0.1:9100/data.txt",
+        "dataType": "text"
+    }]
+}
