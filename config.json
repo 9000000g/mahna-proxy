@@ -19,5 +19,20 @@
         "method": "POST",
         "url": "http://127.0.0.1:9100/data.txt",
         "dataType": "text"
+    }, {
+        "id": "operators",
+        "method": "POST",
+        "url": "http://127.0.0.1:9100/array",
+        "dataType": "json"
+    }, {
+        "id": "queues",
+        "method": "POST",
+        "url": "http://127.0.0.1:9100/queues",
+        "dataType": "json"
+    }, {
+        "id": "jq-plot",
+        "method": "POST",
+        "url": "http://127.0.0.1:9100/jq-plot",
+        "dataType": "json"
     }]
 }

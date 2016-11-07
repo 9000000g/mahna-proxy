@@ -12,17 +12,32 @@ app.listen(9100);
 
 app.get('/data.xml', function(req, res) {
     res.send(xml({
-        foo: 'bar'
+        calls: 12
     }));
 });
 app.get('/data.json', function(req, res) {
     res.json({
-        foo: 'bar'
+        calls: 12
     });
 });
 app.post('/data.txt', function(req, res) {
     var num = parseInt(Math.random() * 100);
     res.send(num.toString());
+});
+app.post('/array', function(req, res) {
+    var ret = [];
+    for( var i = 0; i < 4; i++ ){
+        ret.push( parseInt(Math.random() * 100) );
+    }
+    res.json(ret);
+});
+app.post('/queues', function(req, res) {
+    var ret = ['0121','0122','0123','0128'];
+    res.json(ret);
+});
+app.post('/jq-plot', function(req, res) {
+    var ret = require('./jq-plot-example.json');
+    res.json(ret);
 });
 
 app.get('/data-servers', function(req, res) {
